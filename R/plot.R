@@ -17,7 +17,7 @@
 #' @importFrom ggplot2 scale_colour_manual
 #' @importFrom ggplot2 coord_flip
 #' @export
-mojchart_simple <- function(df,xvar,yvar,chart_type,groupvar=NULL,yscale="int") {
+a11ychart <- function(df,xvar,yvar,chart_type,groupvar=NULL,yscale="int") {
 
   if (chart_type == "doughnut") {
     plot <- doughnut(df,xvar,yvar)
