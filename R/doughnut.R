@@ -4,6 +4,7 @@
 #' @importFrom ggplot2 coord_polar
 #' @importFrom ggplot2 xlim
 #' @importFrom ggplot2 theme_void
+#' @importFrom ggplot2 ggtheme
 #' @importFrom ggplot2 scale_fill_manual
 #' @importFrom ggplot2 theme
 
