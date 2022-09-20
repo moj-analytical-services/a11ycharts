@@ -14,7 +14,7 @@
 #' @importFrom ggplot2 scale_y_continuous
 #' @importFrom ggplot2 expansion
 #' @importFrom ggplot2 expand_limits
-#' @importFrom ggplot2 scale_colour_manual
+#' @importFrom ggplot2 scale_color_manual
 #' @importFrom ggplot2 coord_flip
 #' @export
 a11ychart <- function(df,xvar,yvar,chart_type,groupvar=NULL,yscale="int") {
