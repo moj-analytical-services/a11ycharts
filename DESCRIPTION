@@ -13,6 +13,7 @@ Imports:
 	stringr,
 	stringi,
 	dplyr,
-  ggplot2
+  ggplot2,
+  magrittr
 Remotes: moj-analytical-services/mojchart
 RoxygenNote: 7.1.1

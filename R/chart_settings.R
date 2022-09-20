@@ -1,3 +1,5 @@
+#' @importFrom magrittr `%>%`
+
 # Internal functions for setting different parameters depending on chart type
 
 # Sets line and bar thickness and colour

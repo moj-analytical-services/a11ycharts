@@ -1,3 +1,5 @@
+#' @importFrom magrittr `%>%`
+
 # Internal functions for setting up data frames depending on chart type
 
 # Function to insert line breaks into x-axis labels
