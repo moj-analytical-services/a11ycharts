@@ -8,6 +8,7 @@
 #' @param chart_type chart type to generate. Accepted values are "line", "bar", "horizontalBar" and "doughnut"
 #' @param groupvar variable from data frame which contains a grouping variable
 #' @param yscale numerical format for y-axis values. Accepted values are "int", "percent" and "float"
+#' @param breakwidth (optional) integer giving the number of ticks between each x-axis label
 #' @return A ggplot2 object
 #' @importFrom ggplot2 ggplot
 #' @importFrom ggplot2 aes_string
@@ -17,13 +18,13 @@
 #' @importFrom ggplot2 scale_color_manual
 #' @importFrom ggplot2 coord_flip
 #' @export
-a11ychart <- function(df,xvar,yvar,chart_type,groupvar=NULL,yscale="int") {
+a11ychart <- function(df,xvar,yvar,chart_type,groupvar=NULL,yscale="int",breakwidth=NULL) {
 
   if (chart_type == "doughnut") {
     plot <- doughnut(df,xvar,yvar)
   } else if (chart_type %in% c("line","bar","horizontalBar")) {
 
-    plotdf <- format_df(df,xvar,chart_type,groupvar)
+    plotdf <- format_df(df,xvar,chart_type,groupvar,breakwidth)
 
     plot <-  ggplot(plotdf, aes_string(x = "rownum", y = yvar, colour=groupvar)) +
       scale_y_continuous(label={ if (yscale=="percent") scales::percent_format(accuracy = 1L) else if (yscale %in% c("int","float")) scales::comma},

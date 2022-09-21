@@ -36,7 +36,7 @@ labelbreaks <- function(df,xvar,breakwidth=NULL) {
 
 # Function to combine above functions and format data frame.
 
-format_df <- function(df,xvar,chart_type,groupvar=NULL) {
+format_df <- function(df,xvar,chart_type,groupvar=NULL,breakwidth=NULL) {
 
 # Add row number to data frame to order chart categories
 
@@ -46,7 +46,7 @@ format_df <- function(df,xvar,chart_type,groupvar=NULL) {
     df <- linebreaks(df,xvar)
 
     if (is.null(groupvar)){
-      df <- labelbreaks(df,xvar)
+      df <- labelbreaks(df,xvar,breakwidth)
     } else {
       df <- df %>% dplyr::group_by(get(groupvar)) %>% dplyr::group_modify(~labelbreaks(.x,xvar))
     }

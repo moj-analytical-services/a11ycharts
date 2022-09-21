@@ -4,7 +4,15 @@
 \alias{a11ychart}
 \title{Build a simple mojchart}
 \usage{
-a11ychart(df, xvar, yvar, chart_type, groupvar = NULL, yscale = "int")
+a11ychart(
+  df,
+  xvar,
+  yvar,
+  chart_type,
+  groupvar = NULL,
+  yscale = "int",
+  breakwidth = NULL
+)
 }
 \arguments{
 \item{df}{data frame containing data}
@@ -18,6 +26,8 @@ a11ychart(df, xvar, yvar, chart_type, groupvar = NULL, yscale = "int")
 \item{groupvar}{variable from data frame which contains a grouping variable}
 
 \item{yscale}{numerical format for y-axis values. Accepted values are "int", "percent" and "float"}
+
+\item{breakwidth}{(optional) integer giving the number of ticks between each x-axis label}
 }
 \value{
 A ggplot2 object
