@@ -22,8 +22,8 @@ labelbreaks <- function(df,xvar,breakwidth=NULL) {
 
   if (is.null(breakwidth)) {
 
-    breakwidth <- if (length(df[[xvar]]) < 11) {-1}
-                  else if (length(df[[xvar]]) < 17) {-2}
+    breakwidth <- if (length(df[[xvar]]) < 8) {-1}
+                  else if (length(df[[xvar]]) < 15) {-2}
                   else {-4}
 
   }
