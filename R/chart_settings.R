@@ -22,7 +22,7 @@ chart_type <- function(type,groupvar){
 
 x_scale <- function(type,df,xvar) {
 
-  if (type %in% c("line","bar")){
+  if (type %in% c("line","bar","horizontalBar")){
     ggplot2::scale_x_continuous(breaks=1:nrow(df),
                        label=df[[xvar]])
   } else {
