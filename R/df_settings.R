@@ -11,7 +11,7 @@ linebreaks <- function(df,xvar) {
                 } else if (any(stringr::str_detect(df[[xvar]],"quarterly average"))) {
                   stringr::str_replace(df[[xvar]]," quarterly average","\nquarterly average")
                 } else {
-                  stringi::stri_replace_last_fixed(df[[xvar]]," ","\n")
+                  stringi::stri_replace_last_fixed(df[[xvar]]," 2","\n2")
                 }
   return(df)
 }
