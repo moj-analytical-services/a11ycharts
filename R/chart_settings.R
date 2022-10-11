@@ -23,7 +23,7 @@ chart_type <- function(type,groupvar){
 x_scale <- function(type,df,xvar) {
 
   if (type %in% c("line","bar","horizontalBar")){
-    ggplot2::scale_x_continuous(breaks=1:nrow(df),
+    ggplot2::scale_x_continuous(breaks=as.vector(1:length(df[[xvar]]))[df[[xvar]]!=""],
                        label=df[[xvar]])
   } else {
     ggplot2::scale_x_discrete(limits = levels(factor(df[[xvar]])))
