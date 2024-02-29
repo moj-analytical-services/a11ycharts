@@ -10,11 +10,12 @@ License: What license is it under?
 Encoding: UTF-8
 LazyData: true
 Imports:
-	stringr,
-	stringi,
-	dplyr,
+  stringr,
+  stringi,
+  dplyr,
   ggplot2,
   magrittr,
   mojchart
-Remotes: moj-analytical-services/mojchart
+Remotes: 
+  moj-analytical-services/mojchart
 RoxygenNote: 7.1.1
